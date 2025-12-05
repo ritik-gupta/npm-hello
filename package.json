@@ -7,7 +7,6 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "is-odd": "3.0.1",
-    "is-prime": "3.0.1"
+    "lodash": "0.9.2"
   }
 }
