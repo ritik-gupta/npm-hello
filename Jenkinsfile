@@ -17,7 +17,7 @@ pipeline {
                 script {
                     // Generate Base64 auth token from username and password
                     // This is required for .npmrc _auth
-                    def auth = "${ARTIFACTORY_CREDS_USR}:${ARTIFACTORY_CREDS_PSW}".bytes.encodeBase64().toString()
+                    def auth = java.util.Base64.getEncoder().encodeToString("${ARTIFACTORY_CREDS_USR}:${ARTIFACTORY_CREDS_PSW}".toString().getBytes('UTF-8'))
                     
                     // Inject the auth token into the environment for .npmrc to use
                     withEnv(["NPM_AUTH_TOKEN=${auth}"]) {
