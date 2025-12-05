@@ -21,7 +21,7 @@ pipeline {
                     
                     // Inject the auth token into the environment for .npmrc to use
                     withEnv(["NPM_AUTH_TOKEN=${auth}"]) {
-                        sh 'npm install'
+                        sh 'npm install --verbose'
                         // Verify that packages were resolved from JFrog
                         sh 'grep "resolved" package-lock.json || true'
                         sh 'npm start'

@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "is-odd": "3.0.1",
-    "is-even": "3.0.1"
+    "is-prime": "3.0.1"
   }
 }
