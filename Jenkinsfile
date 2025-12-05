@@ -1,8 +1,9 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:22-bookworm'
-        }
+    agent any
+
+    tools {
+        // Ensure this NodeJS tool is configured in your Jenkins "Global Tool Configuration"
+        nodejs 'NodeJS' 
     }
 
     environment {
