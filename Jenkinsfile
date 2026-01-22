@@ -23,7 +23,7 @@ pipeline {
                     withEnv(["NPM_AUTH_TOKEN=${auth}"]) {
                         sh 'rm -rf node_modules'
                         sh 'rm -rf /var/lib/jenkins/.npm'
-                        sh 'npm install --verbose --prefer-online --no-cache'
+                        sh 'npm install --loglevel=silly --prefer-online --no-cache'
                         // Verify that packages were resolved from JFrog
                         sh 'grep "resolved" package-lock.json || true'
                         sh 'npm start'
