@@ -7,7 +7,6 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "lodash": "4.17.21",
     "is-number": "7.0.0",
     "fast-loops": "1.1.4"
   }
