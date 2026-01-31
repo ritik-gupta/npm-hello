@@ -25,7 +25,7 @@ pipeline {
                         sh 'rm -rf /var/lib/jenkins/.npm'
                         // sh 'npm install  --loglevel=silly --dry-run'
                         sh 'npm install --loglevel=silly --prefer-online --no-cache'
-                        Verify that packages were resolved from JFrog
+                        // Verify that packages were resolved from JFrog
                         sh 'grep "resolved" package-lock.json || true'
                         sh 'npm start'
                     }
