@@ -22,6 +22,7 @@ pipeline {
                     // Inject the auth token into the environment for .npmrc to use
                     withEnv(["NPM_AUTH_TOKEN=${auth}"]) {
                         sh 'rm -rf node_modules'
+                        sh 'rm -rf package-lock.json'
                         sh 'rm -rf /var/lib/jenkins/.npm'
                         // sh 'npm install  --loglevel=silly --dry-run'
                         sh 'npm install --loglevel=silly --prefer-online --no-cache'
