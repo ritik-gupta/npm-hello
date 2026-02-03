@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         // Using the same credentials ID as the Maven project
-        ARTIFACTORY_CREDS = credentials('LinUsrPwd')
+        ARTIFACTORY_CREDS = credentials('StagingPwd')
     }
 
     stages {
